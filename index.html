@@ -3,30 +3,52 @@
 
 <head>
     <meta charset="UTF - 8">
-    <meta name="viewport" content="width=device-width, initial - scale = 1.0">
-    <title>https://fastly.jsdelivr.net/gh/chengaopan/AutoMergePublicNodes@master/list.yml</title>
+    <title>我的静态博客</title>
+    <style>
+        /* 整体页面布局 */
+        body {
+            font - family: Arial, sans - serif;
+            margin: 0;
+            padding: 0;
+            background - color: #f4f4f4;
+        }
+
+        /* 标题样式 */
+        h1 {
+            text - align: center;
+            background - color: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        /* 文章内容样式 */
+        article {
+            width: 80%;
+            margin: 20px auto;
+            background - color: white;
+            padding: 20px;
+            box - shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 页脚样式 */
+        footer {
+            text - align: center;
+            background - color: #333;
+            color: white;
+            padding: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <input type="text" id="urlInput" placeholder="https://fastly.jsdelivr.net/gh/chengaopan/AutoMergePublicNodes@master/list.yml">
-    <button onclick="copyUrl()">复制网址</button>
-
-    <script>
-        async function copyUrl() {
-            const input = document.getElementById('urlInput');
-            const url = input.value;
-            if (navigator.clipboard) {
-                try {
-                    await navigator.clipboard.writeText(url);
-                } catch (err) {
-                    console.error('复制失败:', err);
-                }
-            } else {
-                input.select();
-                document.execCommand('copy');
-            }
-        }
-    </script>
+    <h1>我的博客标题</h1>
+    <article>
+        <h2>我的第一篇文章标题</h2>
+        <p>这是文章的正文内容。这里可以写很长很长的段落，来分享你的想法、经验或者故事等等。可以包含图片、链接等其他元素，不过在这个简单的示例中没有添加。</p>
+    </article>
+    <footer>
+        &copy; 2024版权所有
+    </footer>
 </body>
 
 </html>
