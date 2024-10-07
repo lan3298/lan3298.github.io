@@ -2,36 +2,31 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    a {
-      text-decoration: none;
-      color: blue;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
-<title>Liên kết đăng ký</title></head>
+    <meta charset="UTF - 8">
+    <meta name="viewport" content="width=device - width, initial - scale = 1.0">
+    <title>https://fastly.jsdelivr.net/gh/chengaopan/AutoMergePublicNodes@master/list.yml</title>
+</head>
 
 <body>
-  <a href="#" onClick="copyUrl('https://timi.celine.us.kg/d8227803-65a1-439c-8e8d-9770781d9f68/pcl')">Liên kết đăng ký 1</a><br>
-  <a href="#" onClick="copyUrl('https://bpb1-70u.pages.dev/sub/e7b4884a-1a49-4a02-b761-9441c333ae8b?app=clash#BPB-Normal')">Liên kết đăng ký 2</a><br>
-  <a href="#" onClick="copyUrl('https://fastly.jsdelivr.net/gh/Chengaopan/AutoMergePublicNodes@master/list.yml')">Liên kết đăng ký 3</a><br>
-  <a href="#" onClick="copyUrl('https://maple.icu/api/v1/client/subscribe?token=0e530cd4381b22da678315838da5875c')">Liên kết đăng ký 4</a>
+    <input type="text" id="urlInput" placeholder="https://fastly.jsdelivr.net/gh/chengaopan/AutoMergePublicNodes@master/list.yml">
+    <button onclick="copyUrl()">Sao chép địa chỉ URL</button>
 
-  <script>
-    function copyUrl(url) {
-      const tempInput = document.createElement('input');
-      tempInput.value = url;
-      document.body.appendChild(tempInput);
-      tempInput.select();
-      document.execCommand('copy');
-      document.body.removeChild(tempInput);
-      alert('Liên kết đăng ký đã được sao chép vào bộ nhớ tạm!');
-    }
-  </script>
+    <script>
+        async function copyUrl() {
+            const input = document.getElementById('urlInput');
+            const url = input.value;
+            if (navigator.clipboard) {
+                try {
+                    await navigator.clipboard.writeText(url);
+                } catch (err) {
+                    console.error('Sao chép thất bại:', err);
+                }
+            } else {
+                input.select();
+                document.execCommand('copy');
+            }
+        }
+    </script>
 </body>
 
 </html>
