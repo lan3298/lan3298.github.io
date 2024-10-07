@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF - 8">
-    <meta name="viewport" content="width=device - width, initial - scale = 1.0">
+    <meta name="viewport" content="width=device-width, initial - scale = 1.0">
     <title>https://fastly.jsdelivr.net/gh/chengaopan/AutoMergePublicNodes@master/list.yml</title>
 </head>
 
 <body>
     <input type="text" id="urlInput" placeholder="https://fastly.jsdelivr.net/gh/chengaopan/AutoMergePublicNodes@master/list.yml">
-    <button onclick="copyUrl()">Sao chép địa chỉ URL</button>
+    <button onclick="copyUrl()">复制网址</button>
 
     <script>
         async function copyUrl() {
@@ -19,7 +19,7 @@
                 try {
                     await navigator.clipboard.writeText(url);
                 } catch (err) {
-                    console.error('Sao chép thất bại:', err);
+                    console.error('复制失败:', err);
                 }
             } else {
                 input.select();
